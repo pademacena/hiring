@@ -13,8 +13,6 @@ class InfoService {
       },
     });
 
-    console.log(data);
-
     const {
       'Global Quote': { '01. symbol': name, '05. price': price },
     } = data;
