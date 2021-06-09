@@ -1,0 +1,125 @@
+body {
+  background: #E5E6F0;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  cursor: pointer;
+}
+
+.header {
+  height: 60px;
+  width: 100%;
+  background: #7D40E7;
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFF;
+  display: flex;
+  justify-content: last baseline;
+  align-items: center;
+  position: fixed;
+  top:0;
+  left: 0;
+}
+
+.titleHeader {
+  margin-left: 15px;
+}
+
+.bodyPage {
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.searchContainer .groupBar {
+  display: flex;
+} 
+
+form input {
+  width: 500px;
+  height: 40px;
+  color: #333;
+  border: 1px solid #dcdce6;
+  border-radius: 8px;
+  padding: 0 24px;
+}
+
+.searchButton {
+  width: 150px;
+  height: 40px;
+  background: #7D40E7;
+  border: 0;
+  border-radius: 8px;
+  color: #FFF;
+  font-weight: 700;
+  margin-top: 16px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  transition: filter 0.2s;
+  margin-left: 5px;
+}
+
+.acaoContainer {
+  width: 100%;
+  max-width: 1180px;
+  padding: 0 30px;
+  margin: 32px auto;
+}
+
+.acaoContainer ul {
+  display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    list-style: none;
+}
+
+li.acaoBox {
+  background: #FFF;
+  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.02);
+  border-radius: 2px;
+  padding: 20px;
+  list-style: none;
+  width: 100%;
+  position: relative;
+}
+
+li.acaoBox header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+li.acaoBox header .acaoInfo {
+  margin-left: 10px;
+}
+
+.acaoInfo strong {
+  display: block;
+  font-size: 16px;
+  color: #333;
+}
+
+.acaoInfo span {
+  font-size: 13px;
+  color: #999;
+  margin-top: 2px;
+}
+
+.acaoContainer ul li button {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  border: 0;
+  background: rgb(255, 255, 255);
+}
