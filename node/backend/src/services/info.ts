@@ -5,27 +5,34 @@ import 'dotenv/config';
 
 class InfoService {
   public async execute({ stock_name }: RequestInfo): Promise<ResponseInfo> {
-    const { data } = await api.get('/query', {
-      params: {
-        symbol: stock_name,
-        function: 'GLOBAL_QUOTE',
-        apikey: process.env.API_KEY,
-      },
-    });
+    try {
 
-    const {
-      'Global Quote': { '01. symbol': name, '05. price': price },
-    } = data;
-
-    if (!name && !price) {
-      throw new SrvError('Stock info not found');
+      const { data } = await api.get('/query', {
+        params: {
+          symbol: stock_name,
+          function: 'GLOBAL_QUOTE',
+          apikey: process.env.API_KEY,
+        },
+      });
+  
+      const {
+        'Global Quote': { '01. symbol': name, '05. price': price },
+      } = data;
+  
+      if (!name && !price) {
+        // throw new SrvError('Stock info not found');
+        throw new Error('erro');
+      }
+  
+      return {
+        name,
+        lastPrice: Number(price),
+        priceAt: new Date().toISOString(),
+      };
+    } catch (err) {
+      throw new Error('erro')
     }
-
-    return {
-      name,
-      lastPrice: Number(price),
-      priceAt: new Date().toISOString(),
-    };
+    
   }
 }
 

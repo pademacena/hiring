@@ -23,9 +23,10 @@ class GainsService {
     const stockAtDate = stockDates[purchasedAt];
 
     if (!stockAtDate) {
-      throw new SrvError(
-        'Stock information was not found at specific date parameter',
-      );
+      // throw new SrvError(
+      //   'Stock information was not found at specific date parameter',
+      // );
+      throw new Error('erro');
     }
 
     const { '4. close': closing } = stockAtDate;

@@ -10,7 +10,7 @@ button {
 .header {
   height: 60px;
   width: 100%;
-  background: #7D40E7;
+  background: #4088e7;
   font-size: 18px;
   font-weight: bold;
   color: #FFF;
@@ -20,6 +20,7 @@ button {
   position: fixed;
   top:0;
   left: 0;
+  z-index: 5;
 }
 
 .titleHeader {
@@ -43,7 +44,7 @@ button {
   display: flex;
 } 
 
-form input {
+.search {
   width: 500px;
   height: 40px;
   color: #333;
@@ -55,7 +56,7 @@ form input {
 .searchButton {
   width: 150px;
   height: 40px;
-  background: #7D40E7;
+  background: #4088e7;
   border: 0;
   border-radius: 8px;
   color: #FFF;
@@ -78,15 +79,15 @@ form input {
 
 .acaoContainer ul {
   display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    list-style: none;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  list-style: none;
 }
 
 li.acaoBox {
   background: #FFF;
   box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.02);
-  border-radius: 2px;
+  border-radius: 10px;
   padding: 20px;
   list-style: none;
   width: 100%;
@@ -122,4 +123,202 @@ li.acaoBox header .acaoInfo {
   top: 24px;
   border: 0;
   background: rgb(255, 255, 255);
+}
+
+.projecaoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFF;
+  border-radius: 14px;
+  margin-left: 17%;
+  margin-right: 17%;
+
+}
+
+.projecaoContainer .container1 {
+  margin-left: 25px;
+  margin-right: 15%;
+
+}
+
+.projecaoContainer .container2 {
+  margin-left: 15px;
+  
+}
+
+.projecaoContainer form {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.projecaoContainer form .input-block + .input-block {
+  margin-top: 20px;
+}
+
+.projecaoContainer form .input-group {
+  margin-top: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.projecaoContainer form .input-group .input-block {
+  margin-top: 0;
+}
+
+.projecaoContainer form .input-block label {
+  color: #ACACAC;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+}
+
+.projecaoContainer form .input-block input {
+  width: 100%;
+  height: 32px;
+  font-size: 14px;
+  color: #666;
+  border: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.projecaoContainer form button[type=submit] {
+  width: 100%;
+  border: 0;
+  margin-top: 30px;
+  background: #4088e7;
+  border-radius: 2px;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+
+.projecaoContainer form button[type=submit]:hover {
+  background: #6931ca;
+}
+
+.projecaoContainer .container2 div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-right: 35px;
+}
+
+.projecaoContainer .container2 div p + p {
+  margin-left: 5px;
+}
+
+.projecaoContainer .container2 div p {
+  font-size: 20px;
+}
+
+
+.historicoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFF;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  margin-top: 30px;
+  margin-left: 17%;
+  margin-right: 17%;
+
+}
+
+.historicoContainer .historicoBox {
+  margin-top: 25px;
+}
+
+.historicoBox form .input-group {
+  margin-top: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 25px;
+}
+
+.historicoBox form .input-group .input-block {
+  margin-top: 0;
+}
+
+.historicoBox form .input-block label {
+  color: #ACACAC;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.historicoBox form .input-block input {
+  width: 100%;
+  height: 32px;
+  font-size: 14px;
+  color: #666;
+  border: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.historicoBox form button[type=submit] {
+  width: 100%;
+  border: 0;
+  background: #4088e7;
+  border-radius: 2px;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+
+.historicoBox form button[type=submit]:hover {
+  background: #6931ca;
+}
+
+.historicoBox form .title {
+  justify-content: center;
+}
+
+.resultTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFF;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  margin-left: 17%;
+  margin-right: 17%;
+  padding-bottom: 10px;
+}
+
+.resultTop .first {
+  margin-left: 25px;
+}
+
+.resultTop .last {
+  margin-right: 25px;
+}
+
+
+.resultBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFF;
+  border-radius: 14px;
+  margin-left: 17%;
+  margin-right: 17%;
+  margin-top: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.resultBox .first {
+  margin-left: 25px;
+}
+
+.resultBox .last {
+  margin-right: 25px;
 }

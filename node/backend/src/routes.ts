@@ -9,7 +9,7 @@ const routes = express.Router();
 routes.get('/', ConnectController.index);
 
 routes.get(
-  '/:stock_name/quote',
+  '/stocks/:stock_name/quote',
   celebrate({
     [Segments.PARAMS]: {
       stock_name: Joi.string().required(),
@@ -19,7 +19,7 @@ routes.get(
 );
 
 routes.get(
-  '/:stock_name/history',
+  '/stocks/:stock_name/history',
   celebrate({
     [Segments.PARAMS]: {
       stock_name: Joi.string().required(),
@@ -33,7 +33,7 @@ routes.get(
 );
 
 routes.get(
-  '/:stock_name/gains',
+  '/stocks/:stock_name/gains',
   celebrate({
     [Segments.PARAMS]: {
       stock_name: Joi.string().required(),
@@ -47,7 +47,7 @@ routes.get(
 );
 
 routes.post(
-  '/:stock_name/compare',
+  '/stocks/:stock_name/compare',
   celebrate({
     [Segments.PARAMS]: {
       stock_name: Joi.string().required(),

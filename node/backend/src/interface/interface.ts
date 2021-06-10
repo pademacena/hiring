@@ -26,6 +26,7 @@ export interface ResponseGains {
   priceAtDate: number;
   lastPrice: number;
   capitalGains: number;
+
 }
 
 export interface RequestInfo {
